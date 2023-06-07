@@ -1,3 +1,11 @@
 # Python_2.0
 
-## HomeWork 1 - [HW_1](/venv/Lesson_1)
+## HomeWork 1:
+* [Task_1.1 & 1.2](/venv/Lesson_1/Task_1.py)
+* [Task_2](/venv/Lesson_1/Task_2.py)
+* [Task_3](/venv/Lesson_1/Task_3.py)
+* [Task_4](/venv/Lesson_1/Task_4.py)
+## HomeWork 2:
+* [Task_1](/venv/Lesson_2/Task_1.py)
+* [Task_2](/venv/Lesson_2/Task_2.py)
+* [Task_3](/venv/Lesson_2/Task_3.py)

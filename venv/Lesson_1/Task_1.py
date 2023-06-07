@@ -16,7 +16,6 @@ def herringbone(height):
 
 def multiplication_table():
     print(" "*15,"Таблица умножения")
-    # num = 2
     for i in range(2):
         for k in range(1, 11):
             if i == 0:
