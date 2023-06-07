@@ -5,21 +5,21 @@
 def notation(number, system): # Задания 1. Система счисления
     RESULT = ''
     while number >= 1:
-        OSTATOK = number % system
+        ost = number % system
         if system == 16:
-            if OSTATOK == 10:
-                OSTATOK = 'a'
-            elif OSTATOK == 11:
-                OSTATOK = 'b'
-            elif OSTATOK == 12:
-                OSTATOK = 'c'
-            elif OSTATOK == 13:
-                OSTATOK = 'd'
-            elif OSTATOK == 14:
-                OSTATOK = 'e'
-            elif OSTATOK == 15:
-                OSTATOK = 'f'
-        RESULT += str(OSTATOK)
+            if ost == 10:
+                ost = 'a'
+            elif ost == 11:
+                ost = 'b'
+            elif ost == 12:
+                ost = 'c'
+            elif ost == 13:
+                ost = 'd'
+            elif ost == 14:
+                ost = 'e'
+            elif ost == 15:
+                ost = 'f'
+        RESULT += str(ost)
         number = number // system
 
     return RESULT[::-1]
