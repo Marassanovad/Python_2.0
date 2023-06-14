@@ -9,3 +9,8 @@
 * [Task_1](/venv/Lesson_2/Task_1.py)
 * [Task_2](/venv/Lesson_2/Task_2.py)
 * [Task_3](/venv/Lesson_2/Task_3.py)
+## HomeWork 3:
+* [Task_1](/venv/Lesson_3/Task_1.py) - не получилось сделать :(
+* [Task_2](/venv/Lesson_3/Task_2.py)
+* [Task_3](/venv/Lesson_3/Task_3.py)
+* [Task_4](/venv/Lesson_3/Task_4.py)
