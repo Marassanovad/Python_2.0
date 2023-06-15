@@ -1,16 +1,3 @@
-# 1.Решить задачи, которые не успели решить на семинаре.
-# Напишите программу банкомат.
-# ✔ Начальная сумма равна нулю
-# ✔ Допустимые действия: пополнить, снять, выйти
-# ✔ Сумма пополнения и снятия кратны 50 у.е.
-# ✔ Процент за снятие — 1.5% от суммы снятия, но не менее 30 и не более 600 у.е.
-# ✔ После каждой третей операции пополнения или снятия начисляются проценты - 3%
-# ✔ Нельзя снять больше, чем на счёте
-# ✔ При превышении суммы в 5 млн, вычитать налог на богатство 10% перед каждой операцией, даже ошибочной
-# ✔ Любое действие выводит сумму денег
-
-
-
 class Bankomat:
 
     def __init__(self, balance):
@@ -20,14 +7,14 @@ class Bankomat:
         return f"Текущий баланс: {self.balance}"
 
 
-    def top_up(self, sum):
+    def top_up(self, sum): # пополнения
         if sum % 50 == 0:
             self.balance = self.balance + sum
             return f"Операция была успешна \n{Bankomat.balance(self)}"
         else:
             return "Сумма пополнения долна быть кратна 50"
 
-    def withdraw(self, sum):
+    def withdraw(self, sum): # снятия
         if sum % 50 == 0:
             percent = sum * 0.015
             if percent < 30:
@@ -35,7 +22,7 @@ class Bankomat:
             elif percent > 600:
                 percent = 600
             if self.balance < (sum + percent):
-                return "На балансе не достаточно средств"
+                return "На балансе недостаточно средств"
             else:
                 self.balance -= (sum + percent)
                 return f"Операция была успешна \n{Bankomat.balance(self)}"
@@ -43,17 +30,17 @@ class Bankomat:
             return "Сумма снятия долна быть кратна 50"
 
 
-    def percent_for_operation(self):
+    def percent_for_operation(self): # бонус за использования
         self.balance += (self.balance * 0.03)
         return f"Спасибо за использования нашего БАНКОМАТА \nЗа это мы вам начислем бонусы :) \n" \
                f"{Bankomat.balance(self)}"
 
-    def limit(self):
+    def limit(self): # ха-ха че то вы очень богатый
         if self.balance >= 5_000_000:
             self.balance -= (self.balance * 0.10)
             return "Ой, у вас очень много денег. Поэтому мы немного заберем"
 
-    def menu(self, i):
+    def menu(self, i): # меню банкомата
         match i:
             case 0:
                 print("-"*50)
@@ -82,23 +69,6 @@ class Bankomat:
 
 
 
-
-
-
-if __name__ == '__main__':
-    operation = 0
-    bankomat = Bankomat(5_000_000)
-    print("Добро пожаловать в наш БАНКОМАТ")
-    while True:
-        Bankomat.menu(bankomat, 0)
-        k = int(input("Введите число: "))
-        print(Bankomat.limit(bankomat))
-        Bankomat.menu(bankomat, k)
-        operation +=1
-        if operation % 3 == 0:
-            print(Bankomat.percent_for_operation(bankomat))
-        if k == 4:
-            break
 
 
 
