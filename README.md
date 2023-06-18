@@ -18,3 +18,7 @@
 * [Task_2](/venv/Lesson_4/Task_2.py)
 * [Task_3](/venv/Lesson_4/Task_3.py)
 * [Task_4](/venv/Bankomat/main.py)
+## HomeWork 5:
+* [Task_1](/venv/Lesson_5/Task_1.py) - думаю слишком много лишнего
+* [Task_2](/venv/Lesson_5/Task_2.py)
+* [Task_3](/venv/Lesson_5/Task_3.py)

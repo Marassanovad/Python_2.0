@@ -15,10 +15,17 @@ def simple_object():
         else:
             print("текст нне содержит кодировку ASSCII")
 
-
+def task_iterator():
+    data = {"один": 1, "два": 2, "три": 3}
+    x = iter(data.items())
+    print(x)
+    y = next(x)
+    print(y)
+    z = next(iter(y))
+    print(z)
 
 if __name__ == '__main__':
-    data_types()  # задания 1
+    # data_types()  # задания 1
     # help() # задания 2 - keywords, задания 3 - symbols
     # simple_object() # задания 3
 
@@ -27,5 +34,7 @@ if __name__ == '__main__':
     # print(list(map(str, data)))
     # print(max(data, key=lambda x: -x))
     # print(*filter(lambda x: not x[0].startswith('__'), globals().items()))
+
+    task_iterator()
 
 

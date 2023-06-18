@@ -9,7 +9,6 @@ def idontunderstand(**kwargs):
         if isinstance(key, (list, dict, set, bytearray)):
             key = str(key)
         my_dict[key] = value
-        print(hash(key))
     return my_dict
 
 
