@@ -13,7 +13,5 @@ def idontunderstand(**kwargs):
 
 
 
-
-
 if __name__ == '__main__':
     print(idontunderstand(lll="sss", num=123, spisok={1, 2, 3, 4}, skuchno=[1, 2, 3, 4], spisok_2={'1': 12, 2: 10, 3: 11}))

@@ -20,7 +20,7 @@ def sum(a1: int, a2: int, b1: int, b2: int):
         a2 = a2 * b2
     a = a1 + b1
     return nod(a, a2)
-    # return a, a2
+
 
 def nod(a: int , b: int):
     while True:
