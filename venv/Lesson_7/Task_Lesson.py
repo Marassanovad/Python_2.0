@@ -176,7 +176,7 @@ def sort_file(path: str):
 if __name__ == '__main__':
     # pair_of_nums('test.txt', 10)
     # write_name('name.txt', 10)
-    # task_3('task_3.txt')
+    task_3('task_3.txt')
     file_extension(['txt', 'md', 'doc', 'rtf', 'png', 'bmp', 'mp3', 'ogg', 'wav', 'mp4', 'avi', 'mov'], dir='test', count_file=30)
     # sort_file("/Users/dasa/Documents/geekbrains/Python2.0/venv/Lesson_7/test")
 

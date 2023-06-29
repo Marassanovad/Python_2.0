@@ -1,0 +1,47 @@
+{
+    "Task_1.py": {
+        "parent": "Test",
+        "type": "file",
+        "size": "1105 bytes"
+    },
+    "Task_9.py": {
+        "parent": "Test",
+        "type": "file",
+        "size": "504 bytes"
+    },
+    "test_3": {
+        "parent": "Test",
+        "type": "folder",
+        "size": "96 bytes"
+    },
+    "kkkk": {
+        "parent": "test_3",
+        "type": "file",
+        "size": "0 bytes"
+    },
+    "test_4": {
+        "parent": "Test",
+        "type": "folder",
+        "size": "160 bytes"
+    },
+    "test_2": {
+        "parent": "Test",
+        "type": "folder",
+        "size": "288 bytes"
+    },
+    "sss": {
+        "parent": "test_2",
+        "type": "folder",
+        "size": "96 bytes"
+    },
+    "2.py": {
+        "parent": "sss",
+        "type": "file",
+        "size": "0 bytes"
+    },
+    "1.py": {
+        "parent": "test_2",
+        "type": "file",
+        "size": "0 bytes"
+    }
+}
