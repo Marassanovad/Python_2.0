@@ -27,3 +27,5 @@
 * [Task_2](/venv/Lesson_6/module/chess.py) - шахматы. Немного не получается с рандомными позициями, выводит в 70% - 3 значения и в 10% - 4 значения
 ## HomeWork 7:
 * [Task_1](/venv/Lesson_7/HW_Task.py)
+## HomeWork 8:
+* [Task_1](/venv/Lesson_8/HW_Task.py)
