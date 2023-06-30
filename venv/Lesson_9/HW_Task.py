@@ -18,7 +18,7 @@ def find_root_in_every_lines(file_name:str='csv_file.csv'):
             result = {}
             with open(file_name, 'r', encoding='utf-8') as read_file:
                 reader = csv.reader(read_file, dialect='excel')
-                for i, row in enumerate(reader):
+                for i, row in enumerate(reader, 1):
                     a, b, c = row
                     my_dict = {i: {"a": a, "b": b, "c": c, "result": func(int(a), int(b), int(c))}}
                     result.update(my_dict)
