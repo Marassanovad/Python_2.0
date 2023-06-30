@@ -29,3 +29,5 @@
 * [Task_1](/venv/Lesson_7/HW_Task.py)
 ## HomeWork 8:
 * [Task_1](/venv/Lesson_8/HW_Task.py)
+* ## HomeWork 9:
+* [Task_1](/venv/Lesson_9/HW_Task.py)
