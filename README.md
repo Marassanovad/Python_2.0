@@ -31,3 +31,7 @@
 * [Task_1](/venv/Lesson_8/HW_Task.py)
 * ## HomeWork 9:
 * [Task_1](/venv/Lesson_9/HW_Task.py)
+## HomeWork 10:
+* [Task_1](/venv/Lesson_10/HW_Task_1.py) - Фабрика
+* [Task_2](/venv/Bankomat/main.py) - Банкомат. Был сделан до этого
+* [Task_3](/venv/Lesson_10/HW_Task_2.py) - Класс, который печатает елочку и таблицу умножения
