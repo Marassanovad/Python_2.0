@@ -35,7 +35,7 @@
 * [Task_1](/venv/Lesson_10/HW_Task_1.py) - Фабрика
 * [Task_2](/venv/Bankomat/main.py) - Банкомат. Был сделан до этого
 ## HomeWork 11:
-* [Task_1](/venv/Lesson_10/HW_Task.py) - Матрица
-* [Task_2](/venv/Lesson_10/Lesson_Task.py) - добавила документацию классу прямоугольник и методы печати
+* [Task_1](/venv/Lesson_11/HW_Task.py) - Матрица
+* [Task_2](/venv/Lesson_11/Lesson_Task.py) - добавила документацию классу прямоугольник и методы печати
 
 
