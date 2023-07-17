@@ -37,5 +37,7 @@
 ## HomeWork 11:
 * [Task_1](/venv/Lesson_11/HW_Task.py) - Матрица
 * [Task_2](/venv/Lesson_11/Lesson_Task.py) - добавила документацию классу прямоугольник и методы печати
+## HomeWork 12:
+* [Task_1](/venv/Lesson_12/HW_Task.py) - Students, почему-то не хочет работать дискриптор для предметов
 
 
