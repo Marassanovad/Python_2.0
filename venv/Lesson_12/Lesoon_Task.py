@@ -123,7 +123,6 @@ def validate(self, value):
 
 class Rectangle:
 
-
     # __slots__ = ['_length', '_width']
 
     _length = Range(1)

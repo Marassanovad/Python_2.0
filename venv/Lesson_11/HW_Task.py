@@ -57,26 +57,6 @@ class Matrix:
             return f'Матрицы разных размеров, сложить не получается'
 
 
-        # if len(self.matrix) != len(other.matrix):
-        #     if len(self.matrix) < len(other.matrix):
-        #         for row in self.matrix:
-        #             row.append(0 * (len(other.matrix) - len(self.matrix)))
-        #     else:
-        #         for row in other.matrix:
-        #             row.append(0 * (len(self.matrix) - len(other.matrix)))
-        # if len(self.matrix[0]) != len(other.matrix[0]):
-        #     if len(self.matrix[0]) < len(other.matrix[0]):
-        #         self.matrix.append([0 * len(self.matrix)] * (len(other.matrix[0]) - len(self.matrix[0])))
-        #     else:
-        #         other.matrix.append([0 * len(other.matrix)] * (len(self.matrix[0]) - len(other.matrix[0])))
-        #
-        # for i in range(len(self.matrix)):
-        #     for j in range(len(self.matrix[0])):
-        #         row.append(self.matrix[i][j] + other.matrix[i][j])
-        #     res.append(row)
-        #     row = []
-        # return Matrix(res)
-
     def __mul__(self, other):
         ''' Метод умножения'''
         res = []
