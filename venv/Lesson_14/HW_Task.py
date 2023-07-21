@@ -1,80 +1,8 @@
-'''
-Возьмите 1-3 задачи из тех, что были на прошлых семинарах или в домашних заданиях.
-Напишите к ним классы исключения с выводом подробной информации.
-Поднимайте исключения внутри основного кода.
-Например нельзя создавать прямоугольник со сторонами отрицательной длины.
-'''
-
-class SideError(Exception):
-    def __init__(self, value):
-        self.value = value
-
-    def __str__(self):
-        return f'Значение должно быть положительное. Вы пытаетесь установить: {self.value}'
-
-class Rectangle:
-
-    def __init__(self, length: int, width: int = None):
-        if length > 0:
-            self.length = length
-        else:
-            raise SideError(length)
-        if width is not None and width > 0:
-            self.width = width
-        elif width is None:
-            self.width = length
-        else:
-            raise SideError(width)
+import doctest
+import unittest
+import pytest
 
 
-    def perimeter(self):
-        ''' Perimeter'''
-        return (self.length + self.width) * 2
-
-    def square(self):
-        ''' Square'''
-        return self.length * self.width
-
-    def __doc__(self):
-        return "Документация"
-
-    def __add__(self, other):
-        ''' сложения'''
-        return self.perimeter() + other.perimeter()
-
-    def __sub__(self, other):
-        ''' вычитания '''
-        return abs(self.perimeter() - other.perimeter())
-
-    def __eq__(self, other):
-        ''' сравнения'''
-        return self.square() == other.square()
-
-    def __ne__(self, other):
-        ''' сравнения'''
-        return self.square() != other.square()
-
-    def __gt__(self, other):
-        ''' сравнения'''
-        return self.square() > other.square()
-
-    def __ge__(self, other):
-        ''' сравнения'''
-        return self.square() >= other.square()
-
-    def __lt__(self, other):
-        ''' сравнения'''
-        return self.square() < other.square()
-
-    def __le__(self, other):
-        ''' сравнения'''
-        return self.square() <= other.square()
-
-    def __str__(self):
-        return f'Длина - {self.length}, Ширина - {self.width}'
-
-    def __repr__(self):
-        return f'Длина - {self.length}, Ширина - {self.width}'
 
 
 class MatrixError(Exception):
@@ -89,14 +17,24 @@ class MatrixError(Exception):
 
 class Matrix:
     '''
-    Задание
+    ---- Умножение матриц ----
+    >>> matrix = Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
+    >>> matrix_1 = Matrix([[1, 2, 3], [3, 4, 5]])
+    >>> print(matrix * matrix_1)
+    Traceback (most recent call last):
+        ...
+    MatrixError: Матрицы разных размеров. Кол-во столбцов 1- 3 2- 2. Кол-во строк 1- 3 2- 3
 
-    📌 Добавьте ко всем задачам с семинара строки документации и методы вывода информации на печать.
-    📌 Создайте класс Матрица. Добавьте методы для:
-        ○ вывода на печать,
-        ○ сравнения,
-        ○ сложения,
-        ○ *умножения матриц
+    ---- Сумма всех элементов ----
+    >>> matrix = Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
+    >>> print(matrix.sum_matrix())
+    39
+
+    ---- Проверка на равенство ----
+    >>> matrix = Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
+    >>> matrix_1 = Matrix([[1, 2, 3], [3, 4, 5]])
+    >>> print(matrix == matrix_1)
+    False
     '''
 
     def __init__(self, matrix: list[list[int]]):
@@ -190,13 +128,49 @@ class Matrix:
         return self.sum_matrix() <= other.sum_matrix()
 
 
+''' Unittest'''
+class TestFunc(unittest.TestCase):
+
+    def setUp(self):
+        self.test_matrix = Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
+        self.test_matrix_1 = Matrix([[1, 2, 3], [3, 4, 5]])
+
+    def test1(self):
+        self.assertTrue(self.test_matrix != self.test_matrix_1)
+
+    # def test2(self): # не поняла как должно работать
+    #     self.assertRaises(MatrixError, , self.test_matrix, self.test_matrix_1)
+
+    def test3(self):
+        self.assertTrue(self.test_matrix > self.test_matrix_1)
+
+    def test4(self):
+        self.assertFalse(self.test_matrix < self.test_matrix_1)
+
+'''Pytest'''
+@pytest.fixture
+def data1():
+    return Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
+
+@pytest.fixture
+def data2():
+    return Matrix([[1, 2, 3], [3, 4, 5]])
+
+def test_1(data1):
+    assert data1.matrix_transposition()
+
+def test_2(data1, data2):
+    with pytest.raises(MatrixError):
+        assert data1 + data2
+
+def test_3(data1, data2):
+    assert data1 >= data2
+
+def test_4(data1, data2):
+    assert not data1 <= data2
 
 
 if __name__ == '__main__':
-    # new_rec = Rectangle(-1)
-    # print(new_rec)
-    matrix = Matrix([[1, 2, 4], [3, 4, 6], [5, 6, 8]])
-    print(matrix.sum_matrix())
-    matrix_1 = Matrix([[1, 2, 3], [3, 4, 5]])
-    # print(matrix * matrix_1)
-    print(matrix != matrix_1)
+    unittest.main(verbosity=2)
+    doctest.testmod(verbose=True)
+    # pytest.main([ '-v'])
